@@ -1,0 +1,14 @@
+{% extends "core/base.html" %}
+
+
+{%block title%}Contact{%endblock%}
+
+
+{% block content%}
+<h1>The Contact page</h1>
+<form method="post" action="{% url 'core:logout' %}">
+    {% csrf_token %}
+    <button type="submit" class="bg-red-100 px-6 py-3 rounded-xl hover:bg-red-500">Logout</button>
+</form>
+
+{%endblock%}
